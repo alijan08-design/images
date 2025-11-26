@@ -379,7 +379,6 @@
     }
 
     .wrap,
-    header,
     main,
     footer {
       width: 100%;
@@ -500,54 +499,63 @@
     }
   </style>
   <!-- ===================== GLOBAL GALLERY STYLE ===================== -->
-<style>
-  .gallery-section h3 {
-    margin: 30px 0 15px;
-    font-family: "Playfair Display", serif;
-    font-size: 28px;
-  }
+  <style>
+    .gallery-section h3 {
+      margin: 30px 0 15px;
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+    }
 
-  .masonry {
-    column-count: 3;
-    column-gap: 14px;
-  }
+    .masonry {
+      column-count: 3;
+      column-gap: 14px;
+    }
 
-  .gallery-card {
-    display: inline-block;
-    width: 100%;
-    margin: 0 0 14px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.02);
-    overflow: hidden;
-    transition: 0.3s;
-  }
+    .gallery-card {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      overflow: hidden;
+      transition: 0.3s;
+    }
 
-  .gallery-card:hover {
-    transform: translateY(-6px);
-  }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+    }
 
-  .gallery-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+    .gallery-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-  .meta {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .meta {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  @media (max-width: 1024px) {
-    .masonry { column-count: 2; }
-  }
+    @media (max-width: 1024px) {
+      .masonry {
+        column-count: 2;
+      }
+    }
 
-  @media (max-width: 768px) {
-    .masonry { column-count: 1; }
-  }
-</style>
+    @media (max-width: 768px) {
+      .masonry {
+        column-count: 1;
+      }
+    }
+
+    /* Fix Bootstrap submenu */
+    .dropdown-submenu {
+      position: relative;
+    }
+  </style>
 
 </head>
 
@@ -563,15 +571,30 @@
       </div>
       <nav>
         <a href="#home">Home</a>
-        <div class="dropdow-center">
+        <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Gallery
           </button>
+
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="calligeaphy.html">Caligraphy</a></li>
-            <li><a class="dropdown-item" href="horses.html">horse</a></li>
-            <li><a class="dropdown-item" href="architect.html">Architect</a></li>
+            <li><a class="dropdown-item" href="land.html">Landscape</a></li>
+            <!-- ================= SUBMENU HERE ================= -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">pen-and-ink</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="master.html">Master Peice</a></li>
+                <li><a class="dropdown-item" href="regular.html">Regular</a></li>
+                <li><a class="dropdown-item" href="horses.html">Horse</a></li>
+                <li><a class="dropdown-item" href="architect.html">Architect</a></li>
+                <hr>
+                <li><a class="dropdown-item" href="other.html">Others</a></li>
+              </ul>
+            </li>
+            <!-- ================================================= -->
+
+
           </ul>
         </div>
         <a href="#about">About</a>
@@ -606,173 +629,262 @@
           </div>
         </div>
       </section>
+      <section id="calligraphy" class="gallery-section">
+        <h3>pen-and-ink</h3>
+        <div class="masonry">
 
-    <section id="calligraphy" class="gallery-section">
-  <h3>Calligraphy</h3>
-  <div class="masonry">
+          <div class="gallery-card">
+            <img src="images/pen n ink/masterpeice/aff.jpeg">
+            <div class="meta">
+              <a href="images/pen n ink/masterpeice/aff.jpeg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/calli/one.jpg">
-      <div class="meta">
-        <a href="images/calli/one.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/pen n ink/masterpeice/lk3.jpeg">
+            <div class="meta">
+              <a href="images/pen n ink/masterpeice/lk3.jpeg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/calli/two.jpg">
-      <div class="meta">
-        <a href="images/calli/two.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/pen n ink/regular/re (4).jpg">
+            <div class="meta">
+              <a href="images/pen n ink/regular/re (4).jpg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 3">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/calli/three.jpg">
-      <div class="meta">
-        <a href="images/calli/three.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Calligraphy Artwork 3">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/pen n ink/regular/re (2).jpg">
+            <div class="meta">
+              <a href="images/pen n ink/regular/re (2).jpg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 4">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/calli/four.jpg">
-      <div class="meta">
-        <a href="images/calli/four.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Calligraphy Artwork 4">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/pen n ink/horse/IMG_3075.JPG">
+            <div class="meta">
+              <a href="images/pen n ink/horse/IMG_3075.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 5">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/calli/five.jpg">
-      <div class="meta">
-        <a href="images/calli/five.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Calligraphy Artwork 5">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/pen n ink/horse/IMG_3078.JPG">
+            <div class="meta">
+              <a href="images/pen n ink/horse/IMG_3078.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 6">Add to Cart</button>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <img src="images/pen n ink/architect/IMG_1870.JPG">
+            <div class="meta">
+              <a href="images/pen n ink/architect/IMG_1870.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 6">Add to Cart</button>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <img src="images/pen n ink/architect/25'' by 33''.jpg">
+            <div class="meta">
+              <a href="images/pen n ink/architect/25'' by 33''.jpg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 6">Add to Cart</button>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <img src="images/pen n ink/masterpeice/lk2.jpeg">
+            <div class="meta">
+              <a href="images/pen n ink/masterpeice/lk2.jpeg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 6">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+            <section id="calligraphy" class="gallery-section">
+        <h3>Landscapes</h3>
+        <div class="masonry">
 
-    <div class="gallery-card">
-      <img src="images/calli/six.JPG">
-      <div class="meta">
-        <a href="images/calli/six.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Calligraphy Artwork 6">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/landscape sceneries/DSC_3948.JPG">
+            <div class="meta">
+              <a href="images/landscape sceneries/DSC_3948.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
+            </div>
+          </div>
 
-  </div>
-</section>
+          <div class="gallery-card">
+            <img src="images/landscape sceneries/18X24.JPG">
+            <div class="meta">
+              <a href="images/landscape sceneries/18X24.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+            </div>
+          </div>
 
-<section id="architect" class="gallery-section">
-  <h3>Architect</h3>
-  <div class="masonry">
+          <div class="gallery-card">
+            <img src="images/landscape sceneries/026.JPG">
+            <div class="meta">
+              <a href="images/landscape sceneries/026.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 3">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/architect/1.jpg">
-      <div class="meta">
-        <a href="images/architect/1.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Architect 1">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/landscape sceneries/027.JPG">
+            <div class="meta">
+              <a href="images/landscape sceneries/027.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 4">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/architect/22X28.JPG">
-      <div class="meta">
-        <a href="images/architect/22X28.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Architect 2">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/landscape sceneries/028.JPG">
+            <div class="meta">
+              <a href="images/landscape sceneries/028.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 5">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/architect/25'' by 33''.jpg">
-      <div class="meta">
-        <a href="images/architect/25'' by 33''.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Architect 3">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/landscape sceneries/029.JPG">
+            <div class="meta">
+              <a href="images/landscape sceneries/029.JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 6">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/architect/27 X 20.5.JPG">
-      <div class="meta">
-        <a href="images/architect/27 X 20.5.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Architect 4">Add to Cart</button>
-      </div>
-    </div>
+        </div>
+      </section>
+      <section id="calligraphy" class="gallery-section">
+        <h3>Calligraphy</h3>
+        <div class="masonry">
 
-    <div class="gallery-card">
-      <img src="images/architect/30 X 40.JPG">
-      <div class="meta">
-        <a href="images/architect/30 X 40.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Architect 5">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/calli/one.jpg">
+            <div class="meta">
+              <a href="images/calli/one.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/architect/407168_325279937510729_100000861771651_890505_329806192_n.jpg">
-      <div class="meta">
-        <a href="images/architect/407168_325279937510729_100000861771651_890505_329806192_n.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Architect 6">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/calli/two.jpg">
+            <div class="meta">
+              <a href="images/calli/two.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+            </div>
+          </div>
 
-  </div>
-</section>
+          <div class="gallery-card">
+            <img src="images/calli/three.jpg">
+            <div class="meta">
+              <a href="images/calli/three.jpg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 3">Add to Cart</button>
+            </div>
+          </div>
 
+          <div class="gallery-card">
+            <img src="images/calli/four.jpg">
+            <div class="meta">
+              <a href="images/calli/four.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 4">Add to Cart</button>
+            </div>
+          </div>
 
-  <section id="horse" class="gallery-section">
-  <h3>Horse</h3>
-  <div class="masonry">
+          <div class="gallery-card">
+            <img src="images/calli/five.jpg">
+            <div class="meta">
+              <a href="images/calli/five.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 5">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/horse/43X31.JPG">
-      <div class="meta">
-        <a href="images/horse/43X31.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Horse 1">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/calli/six.JPG">
+            <div class="meta">
+              <a href="images/calli/six.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 6">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/horse/Copy of hors.jpg">
-      <div class="meta">
-        <a href="images/horse/Copy of hors.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Horse 2">Add to Cart</button>
-      </div>
-    </div>
+        </div>
+      </section>
+            <section id="calligraphy" class="gallery-section">
+        <h3>Others</h3>
+        <div class="masonry">
 
-    <div class="gallery-card">
-      <img src="images/horse/IMG_3075.JPG">
-      <div class="meta">
-        <a href="images/horse/IMG_3075.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Horse 3">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/still life/st (6).jpg">
+            <div class="meta">
+              <a href="images/still life/st (6).jpg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/horse/IMG_3078.JPG">
-      <div class="meta">
-        <a href="images/horse/IMG_3078.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Horse 4">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/still life/st (7).jpg">
+            <div class="meta">
+              <a href="images/still life/st (7).jpg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/horse/IMG_4025 final.jpg">
-      <div class="meta">
-        <a href="images/horse/IMG_4025 final.jpg" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Horse 5">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/still life/st (1).jpg">
+            <div class="meta">
+              <a href="images/still life/st (1).jpg"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 3">Add to Cart</button>
+            </div>
+          </div>
 
-    <div class="gallery-card">
-      <img src="images/horse/IMG_9931.JPG">
-      <div class="meta">
-        <a href="images/horse/IMG_9931.JPG" style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
-        <button class="add-to-cart" data-name="Horse 6">Add to Cart</button>
-      </div>
-    </div>
+          <div class="gallery-card">
+            <img src="images/abstract art/ab (4).JPG">
+            <div class="meta">
+              <a href="images/abstract art/ab (4).JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 4">Add to Cart</button>
+            </div>
+          </div>
 
-  </div>
-</section>
+          <div class="gallery-card">
+            <img src="images/abstract art/ab (7).JPG">
+            <div class="meta">
+              <a href="images/abstract art/ab (7).JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 5">Add to Cart</button>
+            </div>
+          </div>
 
+          <div class="gallery-card">
+            <img src="images/abstract art/ab (2).JPG">
+            <div class="meta">
+              <a href="images/abstract art/ab (2).JPG"
+                style="text-decoration: none; color: #f7f7f8; font-weight: bold;">View</a>
+              <button class="add-to-cart" data-name="Calligraphy Artwork 6">Add to Cart</button>
+            </div>
+          </div>
+      </section>
       <section id="about" class="about">
         <div class="bio">
           <h3>About Asif Ghayaz</h3>
@@ -833,7 +945,8 @@
               <button type="submit" class="btn btn-contact">Send message</button>
               <div style="color:var(--muted);font-size:19px;">Or email:
                 <a href="mailto:asifghayaz831@gmail.com" style="text-decoration: none; color: #f7f7f8; font-size: 15px;"
-                  target="_blank" class="btn"><i class="fa-solid fa-envelope" style="padding: 6px;"></i>asifghayaz831@gmail.com</a>
+                  target="_blank" class="btn"><i class="fa-solid fa-envelope"
+                    style="padding: 6px;"></i>asifghayaz831@gmail.com</a>
               </div>
             </div>
             <div id="status" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
@@ -846,20 +959,23 @@
 
               <!-- fixed simple links (no nested anchors) -->
               <div style="margin-bottom:8px">
-                <a href="https://www.instagram.com/asifghayaz/" target="_blank" style="text-decoration:none;color:inherit;padding:12px" aria-label="Instagram">
+                <a href="https://www.instagram.com/asifghayaz/" target="_blank"
+                  style="text-decoration:none;color:inherit;padding:12px" aria-label="Instagram">
                   <i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram
                 </a>
               </div>
 
               <div style="margin-bottom:8px">
-                <a href="https://www.facebook.com/asif.ghayaz/" target="_blank" style="text-decoration:none;color:inherit;padding:12px" aria-label="Facebook">
+                <a href="https://www.facebook.com/asif.ghayaz/" target="_blank"
+                  style="text-decoration:none;color:inherit;padding:12px" aria-label="Facebook">
                   <i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook
                 </a>
               </div>
 
               <div style="margin-bottom:8px">
                 <!-- WhatsApp: normalized number. Keep +92 country code and no leading + in wa.me path -->
-                <a href="https://wa.me/923463355657" target="_blank" style="text-decoration:none;color:inherit;padding:12px" aria-label="WhatsApp">
+                <a href="https://wa.me/923463355657" target="_blank"
+                  style="text-decoration:none;color:inherit;padding:12px" aria-label="WhatsApp">
                   <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Shop
                 </a>
               </div>
@@ -895,7 +1011,8 @@
       </a>
 
       <a href="https://wa.me/923463355657" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="35" height="35">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="35"
+          height="35">
       </a>
     </div>
 
@@ -1023,6 +1140,41 @@ Total: Rs ${cartTotal}`
 
     // initialise cart display (in case empty)
     renderCart();
+  </script>
+  <script>
+    function toggleMain() {
+      document.getElementById("mainDrop").classList.toggle("show");
+    }
+
+    function toggleSub(event) {
+      event.stopPropagation(); // prevent closing main menu
+      document.getElementById("subDrop").classList.toggle("show");
+    }
+
+    // close menus when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.matches(".main-btn")) {
+        document.getElementById("mainDrop").classList.remove("show");
+        document.getElementById("subDrop").classList.remove("show");
+      }
+    });
+  </script>
+  <script>
+    document.querySelectorAll('.dropdown-submenu > a').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let submenu = this.nextElementSibling;
+
+        // Close all other open submenus
+        document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function (menu) {
+          if (menu !== submenu) menu.classList.remove('show');
+        });
+
+        submenu.classList.toggle('show');
+      });
+    });
   </script>
 
 </body>

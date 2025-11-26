@@ -86,7 +86,7 @@
     .identity h1 {
       margin: 0;
       font-family: Playfair Display, serif;
-    
+
     }
 
     .identity p {
@@ -376,7 +376,7 @@
     }
 
     .wrap,
-    header,
+
     main,
     footer {
       width: 100%;
@@ -458,43 +458,48 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
     .carousel-img {
-  border-radius: 14px;
-  object-fit: cover;
-  max-height: 420px;
-  filter: brightness(75%) contrast(105%);
-}
+      border-radius: 14px;
+      object-fit: cover;
+      max-height: 420px;
+      filter: brightness(75%) contrast(105%);
+    }
 
-/* Glass Blur Heading Box */
-.carousel-overlay {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 14px 32px;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-}
+    /* Glass Blur Heading Box */
+    .carousel-overlay {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 14px 32px;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(10px);
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
 
-.carousel-overlay h2 {
-  margin: 0;
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 0.5px;
-}
-/* Make all gallery images the same size */
-.card img {
-  width: 100%;
-  height: 280px;      /* Adjust height as you like (250–350px works well) */
-  object-fit: cover;  /* Crops edges but keeps image perfect */
-  border-radius: 10px;
-}
+    .carousel-overlay h2 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.5px;
+    }
 
-
+    /* Make all gallery images the same size */
+    .card img {
+      width: 100%;
+      height: 280px;
+      /* Adjust height as you like (250–350px works well) */
+      object-fit: cover;
+      /* Crops edges but keeps image perfect */
+      border-radius: 10px;
+    }
+    .dropdown-submenu {
+  position: relative;
+}
   </style>
 </head>
 
@@ -510,217 +515,237 @@
       </div>
       <nav>
         <a href="index.html">Home</a>
-        <div class="dropdow-center">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Gallery
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="calligeaphy.html">Caligraphy</a></li>
-            <li><a class="dropdown-item" href="horses.html">Horse</a></li>
-            <li><a class="dropdown-item" href="architect.html">Architect</a></li>
-          </ul>
-        </div>
-        <a href="#about">About</a>
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Gallery
+  </button>
+
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="calligeaphy.html">Caligraphy</a></li>
+    <li><a class="dropdown-item" href="land.html">Landscape</a></li>
+
+    <!-- ================= SUBMENU HERE ================= -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item dropdown-toggle" href="#">pen-and-ink</a>
+      <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="master.html">Master Peice</a></li>
+                <li><a class="dropdown-item" href="regular.html">Regular</a></li>
+                <li><a class="dropdown-item" href="horses.html">Horse</a></li>
+                <li><a class="dropdown-item" href="architect.html">Architect</a></li>
+                                <hr>
+                <li><a class="dropdown-item" href="other.html">Others</a></li>
+      </ul>
+    </li>
+    <!-- ================================================= -->
+
+  </ul>
+</div>
+
         <a href="#contact" class="btn-contact">Contact</a>
       </nav>
     </header>
 
     <main id="home">
-    <!-- ===== Calligraphy Carousel Start ===== -->
-<div id="calligraphyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+      <!-- ===== Calligraphy Carousel Start ===== -->
+      <div id="calligraphyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
 
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#calligraphyCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#calligraphyCarousel" data-bs-slide-to="1"></button>
-  </div>
-
-  <!-- Slides -->
-  <div class="carousel-inner">
-
-    <!-- Slide 1 -->
-    <div class="carousel-item active position-relative">
-      <img src="images/horse/IMG_3075.JPG" class="d-block w-100  carousel-img" alt="Calligraphy" data-bs-interval="10000">
-
-      <div class="carousel-overlay">
-        <h2>Horse</h2>
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="carousel-item position-relative">
-      <img src="images/horse/IMG_3078.JPG" class="d-block w-100 carousel-img" alt="Calligraphy" data-bs-interval="2000">
-
-      <div class="carousel-overlay">
-        <h2> Horse</h2>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-<section id="Caligraphy">
-  <div class="row g-3">
-
-    <!-- Image 1 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/43X31.JPG" class="w-100" alt="Calligraphy Artwork">
-        <div class="meta">
-          <a href="images/horse/43X31.JPG" style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#calligraphyCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#calligraphyCarousel" data-bs-slide-to="1"></button>
         </div>
-      </div>
-    </div>
 
-    <!-- Image 2 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/Copy of hors.jpg" class="w-100" alt="Calligraphy Artwork">
-        <div class="meta">
-          <a href="images/horse/Copy of hors.jpg"
-            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
+        <!-- Slides -->
+        <div class="carousel-inner">
 
-    <!-- Image 3 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/IMG_3075.JPG" class="w-100" alt="Calligraphy Artwork">
-          <div class="meta">
-          <a href="images/horse/IMG_3075.JPG"
-            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-        <!-- Image 4 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/IMG_3078.JPG" class="w-100" alt="Calligraphy Artwork">
-          <div class="meta">
-          <a href="images/horse/IMG_3078.JPG"
-            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-      <!-- Image 5 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/IMG_4025 final.jpg" class="w-100" alt="Calligraphy Artwork">
-          <div class="meta">
-          <a href="images/horse/IMG_4025 final.jpg"
-            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-      <!-- Image 5 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/IMG_9931.JPG" class="w-100" alt="Calligraphy Artwork">
-          <div class="meta">
-          <a href="images/horse/IMG_9931.JPG"
-            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-        </div>
-      </div>
-    </div>  <!-- Image 5 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/IMG_9933.JPG" class="w-100" alt="Calligraphy Artwork">
-          <div class="meta">
-          <a href="images/horse/IMG_9933.JPG"
-            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-      <!-- Image 5 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/IMG_9934.JPG" class="w-100" alt="Calligraphy Artwork">
-          <div class="meta">
-          <a href="images/horse/IMG_9934.JPG"
-            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-      <!-- Image 5 -->
-    <div class="col-md-4">
-      <div class="card reveal">
-        <img src="images/horse/IMG_9940.JPG" class="w-100" alt="Calligraphy Artwork">
-          <div class="meta">
-          <a href="images/horse/IMG_9940.JPG"
-            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
-          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-  
-         <section id="contact">
-        <h3>Contact & Commissions</h3>
-        <div class="contact-wrap">
-          <form onsubmit="submitContact(event)" class="reveal"
-            style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.02)">
-            <label style="font-weight:700">Name</label>
-            <input type="text" id="name" placeholder="Your name" required />
-            <label style="font-weight:700;margin-top:8px">Email</label>
-            <input type="email" id="email" placeholder="you@example.com" required />
-            <label style="font-weight:700;margin-top:8px">Subject</label>
-            <input type="text" id="subject" placeholder="Commission / enquiry" />
-            <label style="font-weight:700;margin-top:8px">Message</label>
-            <!-- cart -->
-            <section id="cart">
-              <h3 style="text-align: center;">Your Cart</h3>
- <p style="color:var(--muted);text-align:center;margin:6px 0">Items you've added will appear here.</p>
-              <ul id="cart-items"></ul>
-            </section>
-            <textarea id="message" rows="6" placeholder="Tell me about your project or inquiry" required></textarea>
-            <div style="display:flex;gap:10px;margin-top:10px;align-items:center">
-              <button type="submit" class="btn btn-contact">Send message</button>
-              <div style="color:var(--muted);font-size:19px;">Or email: <a href="mailto:asifghayaz831@gmail.com"
-                  style="text-decoration: none; color: #f7f7f8; font-size: 15px;" target="_blank" class="btn"><i
-                    class="fa-solid fa-envelope" style="padding: 6px;"></i>asifghayaz831@gmail.com</a></div>
+          <!-- Slide 1 -->
+          <div class="carousel-item active position-relative">
+            <img src="images/pen n ink/horse/IMG_3075.JPG" class="d-block w-100  carousel-img" alt="Calligraphy"
+              data-bs-interval="10000">
+
+            <div class="carousel-overlay">
+              <h2>Horse</h2>
             </div>
-            <div id="status" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
-          </form>
-  <aside class="side-card">
-            <h4>Studio & Social</h4>
-            <p style="color:var(--muted);margin:6px 0">Studio visits by appointment. Based in (city).</p><br>
-            <div class="socials" style="text-decoration: none; color: #f7f7f8;">
-              <a href="https://www.instagram.com/asifghayaz/" style="text-decoration: none; padding: 12px; " aria-label="Instagram"><a
-                  href="https://www.instagram.com/asifghayaz/" target="_blank" style="text-decoration: none;">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                Instagram</a>
-                <br><br>
-              <a href="https://www.facebook.com/asif.ghayaz/" style="text-decoration: none; padding: 12px;" aria-label="Facebook">
-                <a href="https://www.facebook.com/asif.ghayaz/" target="_blank" style="text-decoration: none;">
-                  <i class="fa-brands fa-facebook"></i>
-                </a>Facebook</a>
-                <br><br>
-              <a href="https://wa.me/+923463355657" style="text-decoration: none; padding: 12px;" aria-label="Buy prints"><a
-                  href="https://wa.me/923001234567" target="_blank" style="text-decoration: none; ">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                Shop</a>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item position-relative">
+            <img src="images/pen n ink/horse/IMG_3078.JPG" class="d-block w-100 carousel-img" alt="Calligraphy"
+              data-bs-interval="2000">
+
+            <div class="carousel-overlay">
+              <h2> Horse</h2>
             </div>
-            <br><br>
-            <h4 style="margin-top:12px">Newsletter</h4>
-            <p style="color:var(--muted);margin:6px 0">Get show announcements and new work updates.</p>
-            <form onsubmit="subscribe(event)">
-              <input id="subscribe-email" type="email" placeholder="Your email" required />
-              <button type="submit" class="btn btn-outline" style="margin-top:8px">Subscribe</button>
-            </form>
-          </aside>
+          </div>
+
         </div>
-      </section>
+
+      </div>
+      <section id="Caligraphy">
+        <div class="row g-3">
+
+          <!-- Image 1 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/43X31.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/43X31.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/Copy of hors.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/Copy of hors.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 3 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/IMG_3075.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/IMG_3075.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- Image 4 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/IMG_3078.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/IMG_3078.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- Image 5 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/IMG_4025 final.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/IMG_4025 final.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- Image 5 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/IMG_9931.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/IMG_9931.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div> <!-- Image 5 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/IMG_9933.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/IMG_9933.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- Image 5 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/IMG_9934.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/IMG_9934.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- Image 5 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/pen n ink/horse/IMG_9940.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/pen n ink/horse/IMG_9940.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <section id="contact">
+            <h3>Contact & Commissions</h3>
+            <div class="contact-wrap">
+              <form onsubmit="submitContact(event)" class="reveal"
+                style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.02)">
+                <label style="font-weight:700">Name</label>
+                <input type="text" id="name" placeholder="Your name" required />
+                <label style="font-weight:700;margin-top:8px">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required />
+                <label style="font-weight:700;margin-top:8px">Subject</label>
+                <input type="text" id="subject" placeholder="Commission / enquiry" />
+                <label style="font-weight:700;margin-top:8px">Message</label>
+                <!-- cart -->
+                <section id="cart">
+                  <h3 style="text-align: center;">Your Cart</h3>
+                  <p style="color:var(--muted);text-align:center;margin:6px 0">Items you've added will appear here.</p>
+                  <ul id="cart-items"></ul>
+                </section>
+                <textarea id="message" rows="6" placeholder="Tell me about your project or inquiry" required></textarea>
+                <div style="display:flex;gap:10px;margin-top:10px;align-items:center">
+                  <button type="submit" class="btn btn-contact">Send message</button>
+                  <div style="color:var(--muted);font-size:19px;">Or email: <a href="mailto:asifghayaz831@gmail.com"
+                      style="text-decoration: none; color: #f7f7f8; font-size: 15px;" target="_blank" class="btn"><i
+                        class="fa-solid fa-envelope" style="padding: 6px;"></i>asifghayaz831@gmail.com</a></div>
+                </div>
+                <div id="status" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
+              </form>
+              <aside class="side-card">
+                <h4>Studio & Social</h4>
+                <p style="color:var(--muted);margin:6px 0">Studio visits by appointment. Based in (city).</p><br>
+                <div class="socials" style="text-decoration: none; color: #f7f7f8;">
+                  <a href="https://www.instagram.com/asifghayaz/" style="text-decoration: none; padding: 12px; "
+                    aria-label="Instagram"><a href="https://www.instagram.com/asifghayaz/" target="_blank"
+                      style="text-decoration: none;">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    Instagram</a>
+                  <br><br>
+                  <a href="https://www.facebook.com/asif.ghayaz/" style="text-decoration: none; padding: 12px;"
+                    aria-label="Facebook">
+                    <a href="https://www.facebook.com/asif.ghayaz/" target="_blank" style="text-decoration: none;">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>Facebook</a>
+                  <br><br>
+                  <a href="https://wa.me/+923463355657" style="text-decoration: none; padding: 12px;"
+                    aria-label="Buy prints"><a href="https://wa.me/923463355657" target="_blank"
+                      style="text-decoration: none; ">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    Shop</a>
+                </div>
+                <br><br>
+                <h4 style="margin-top:12px">Newsletter</h4>
+                <p style="color:var(--muted);margin:6px 0">Get show announcements and new work updates.</p>
+                <form onsubmit="subscribe(event)">
+                  <input id="subscribe-email" type="email" placeholder="Your email" required />
+                  <button type="submit" class="btn btn-outline" style="margin-top:8px">Subscribe</button>
+                </form>
+              </aside>
+            </div>
+          </section>
 
     </main>
 
@@ -741,7 +766,7 @@
     </a>
 
   </div>
-<script>
+  <script>
     // runtime values
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -833,7 +858,42 @@ Total: Rs ${cartTotal}`
       });
     }
   </script>
+  </script>
+<script>
+function toggleMain() {
+  document.getElementById("mainDrop").classList.toggle("show");
+}
 
+function toggleSub(event) {
+  event.stopPropagation(); // prevent closing main menu
+  document.getElementById("subDrop").classList.toggle("show");
+}
+
+// close menus when clicking outside
+document.addEventListener("click", function(e) {
+  if (!e.target.matches(".main-btn")) {
+    document.getElementById("mainDrop").classList.remove("show");
+    document.getElementById("subDrop").classList.remove("show");
+  }
+});
+</script>
+<script>
+document.querySelectorAll('.dropdown-submenu > a').forEach(function(el){
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    let submenu = this.nextElementSibling;
+
+    // Close all other open submenus
+    document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(menu){
+      if(menu !== submenu) menu.classList.remove('show');
+    });
+
+    submenu.classList.toggle('show');
+  });
+});
+</script>
 </body>
 
 </html>

@@ -1,0 +1,1496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Asif Ghayaz — Paintings & Drawings</title>
+  <meta name="description"
+    content="Portfolio of Asif Ghayaz — pen-and-ink and mixed-media paintings. Exhibitions, commissions, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --panel: #0f1113;
+      --muted: #bfc5cc;
+      --accent-1: linear-gradient(135deg, #ffcf67 0%, #ff7a59 60%);
+      --accent-2: #ff7a59;
+      --card-glow: 0 10px 35px rgba(255, 122, 89, 0.08);
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(900px 400px at 10% 10%, rgba(255, 122, 89, 0.04), transparent),
+        radial-gradient(800px 350px at 90% 90%, rgba(255, 207, 103, 0.03), transparent), var(--bg);
+      color: #f7f7f8;
+      font-family: Inter, system-ui, Segoe UI, Arial;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: var(--accent-1);
+      box-shadow: var(--card-glow);
+      object-fit: cover;
+    }
+
+    .identity h1 {
+      margin: 0;
+      font-family: Playfair Display, serif;
+    
+    }
+
+    .identity p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-contact {
+      background: var(--accent-2);
+      color: #111;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .hero-left {
+      padding: 28px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+      backdrop-filter: blur(6px);
+    }
+
+    .kicker {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    h2 {
+      font-family: Playfair Display, serif;
+      margin: 12px 0 6px;
+      font-size: 36px;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: 0;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+    }
+
+    .hero-right {
+      position: relative;
+      height: 200px;
+      width: 380px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 207, 103, 0.06), transparent);
+    }
+
+    .hero-right .art {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 1s ease;
+    }
+
+    .hero-right .overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    /* Gallery */
+    .masonry {
+      column-count: 3;
+      column-gap: 14px;
+    }
+
+    .card {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.02);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .meta {
+      padding: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* About */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 18px;
+    }
+
+    .bio,
+    .side-card {
+      padding: 18px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Contact */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 18px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: transparent;
+      color: inherit;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px 0;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    /* --- Responsive Improvements --- */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-right {
+        order: -1;
+        height: 280px;
+      }
+
+      .masonry {
+        column-count: 2;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wrap {
+        padding: 16px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .hero-left {
+        padding: 20px;
+      }
+
+      .hero-right {
+        height: 220px;
+      }
+
+      .masonry {
+        column-count: 1;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 15px;
+      }
+
+      .logo img {
+        width: 52px;
+        height: 52px;
+      }
+
+
+      .btn,
+      .btn-contact {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      .hero-left {
+        padding: 16px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .hero-right {
+        height: 200px;
+      }
+
+      .side-card,
+      .bio {
+        padding: 14px;
+      }
+
+      footer {
+        font-size: 13px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .wrap,
+
+    main,
+    footer {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    i.fa-instagram {
+      font-size: 24px;
+      color: #E4405F;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    i.fa-instagram:hover {
+      color: #b13589;
+      transform: scale(1.2);
+    }
+
+
+    i.fa-facebook {
+      font-size: 26px;
+      color: #1877F2;
+      /* Facebook Blue */
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    i.fa-facebook:hover {
+      color: #0d65d9;
+      transform: scale(1.2);
+    }
+
+    i.fa-whatsapp {
+      font-size: 26px;
+      color: #25D366;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    i.fa-whatsapp:hover {
+      color: #1ebe5d;
+      transform: scale(1.2);
+    }
+
+    .add-to-cart {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      margin-left: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition:  0.3s;
+    }
+
+    .add-to-cart:hover {
+      background: #45a049;
+    }
+
+    #cart {
+      background: #111;
+      color: #f7f7f8;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 400px;
+    }
+
+    #cart-items li {
+      list-style: none;
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #cart-items button {
+      background: crimson;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .carousel-img {
+  border-radius: 14px;
+  object-fit: cover;
+  max-height: 420px;
+  filter: brightness(75%) contrast(105%);
+}
+
+/* Glass Blur Heading Box */
+.carousel-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 32px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.carousel-overlay h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+/* Make all gallery images the same size */
+.card img {
+  width: 100%;
+  height: 280px;      /* Adjust height as you like (250–350px works well) */
+  object-fit: cover;  /* Crops edges but keeps image perfect */
+  border-radius: 10px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden><img src="images/logo.jpg" alt=""></div>
+        <div class="identity">
+          <h1>Asif Ghayaz</h1>
+          <p>Pen & Ink • Mixed Media • Pakistan</p>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+       <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Gallery
+  </button>
+
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="calligeaphy.html">Caligraphy</a></li>
+    <li><a class="dropdown-item" href="land.html">Landscape</a></li>
+    <!-- ================= SUBMENU HERE ================= -->
+    <li class="dropdown-submenu">
+      <a class="dropdown-item dropdown-toggle" href="#">pen-and-ink</a>
+      <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="master.html">Master Peice</a></li>
+                <li><a class="dropdown-item" href="regular.html">Regular</a></li>
+                <li><a class="dropdown-item" href="horses.html">Horse</a></li>
+                <li><a class="dropdown-item" href="architect.html">Architect</a></li>
+                                <hr>
+                <li><a class="dropdown-item" href="other.html">Others</a></li>
+      </ul>
+    </li>
+    <!-- ================================================= -->
+
+
+  </ul>
+</div>
+
+        <a href="#contact" class="btn-contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+    <!-- ===== Calligraphy Carousel Start ===== -->
+<div id="calligraphyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#calligraphyCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#calligraphyCarousel" data-bs-slide-to="1"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active position-relative">
+      <img src="images/landscape sceneries/027.JPG" class="d-block w-100  carousel-img" alt="Calligraphy" data-bs-interval="10000">
+
+      <div class="carousel-overlay">
+        <h2>Landscapes</h2>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item position-relative">
+      <img src="images/landscape sceneries/029.JPG" class="d-block w-100 carousel-img" alt="Calligraphy" data-bs-interval="2000">
+
+      <div class="carousel-overlay">
+        <h2> Landscapes</h2>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<section id="Caligraphy">
+  <div class="row g-3">
+
+    <!-- Image 1 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/026.JPG" class="w-100" alt="Calligraphy Artwork">
+        <div class="meta">
+          <a href="images/landscape sceneries/026.JPG" style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image 1 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/WhatsApp Image 2025-11-24 at 9.05.01 PM.jpeg" class="w-100" alt="Calligraphy Artwork">
+        <div class="meta">
+          <a href="images/landscape sceneries/WhatsApp Image 2025-11-24 at 9.05.01 PM.jpeg" style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 1">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- Image 2 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/027.JPG" class="w-100" alt="Calligraphy Artwork">
+        <div class="meta">
+          <a href="images/landscape sceneries/027.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image 3 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/028.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/028.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+        <!-- Image 4 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/029.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/029.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+        <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/030.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/030.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/031.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/031.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/10887711_423184254505462_2051525881_n.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/10887711_423184254505462_2051525881_n.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>  <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/10893608_423184307838790_1974236827_n.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/10893608_423184307838790_1974236827_n.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/10904384_423184291172125_1833039963_n.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/10904384_423184291172125_1833039963_n.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/10928651_423184297838791_890245702_n.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/10928651_423184297838791_890245702_n.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/18X24.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/18X24.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/18X36.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/18X36.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/36X24.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/36X24.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/430850_325610334144356_100000861771651_891216_343971976_n.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/430850_325610334144356_100000861771651_891216_343971976_n.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/431176_322714047767318_100000861771651_883541_1530233415_n.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/431176_322714047767318_100000861771651_883541_1530233415_n.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/big lend.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/big lend.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/card2.webp" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/card2.webp"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/Copy of new lend e.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/Copy of new lend e.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 5 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/DSC09425-1.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/DSC09425-1.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+      <!-- Image 19 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/DSC09428.jpg" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/DSC09428.jpg"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+ 
+     <!-- Image 19 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/DSC_0353.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/DSC_0353.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+     <!-- Image 19 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/DSC_0355.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/DSC_0355.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+     <!-- Image 19 -->
+    <div class="col-md-4">
+      <div class="card reveal">
+        <img src="images/landscape sceneries/DSC_0358.JPG" class="w-100" alt="Calligraphy Artwork">
+          <div class="meta">
+          <a href="images/landscape sceneries/DSC_0358.JPG"
+            style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+          <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+           <!-- Image 3 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_0359.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_0359.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 3 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_0360.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_0360.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 3 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_0376.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_0376.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 37 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_0377.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_0377.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+           <!-- Image 36 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_3951.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_3951.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 35-->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_3952.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_3952.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 34 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_3953.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_3953.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 33 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_3954.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_3954.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 32 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_3955.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_3955.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 31 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_3957.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_3957.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 30 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4744.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4744.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 29 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4745.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4745.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 28 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4746.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4746.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 27 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4747.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4747.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 26 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4749.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4749.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 25 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4750.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4750.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 24 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4751.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4751.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 23-->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4753.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4753.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 22 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_4754.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_4754.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 21 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_6484.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_6484.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 20 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_7461.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_7461.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 19 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_7462.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_7462.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 18 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_9444.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_9444.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+           <!-- Image 17 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_9446.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_9446.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 16 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/DSC_9452.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/DSC_9452.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 15 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/IMG_1365.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/IMG_1365.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 14 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/jnantar 1.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/jnantar 1.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 13 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/lend scep.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/lend scep.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 12 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/LEND.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/LEND.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 11 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/new lend 2.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/new lend 2.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 10 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Oil 18x24.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Oil 18x24.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 9 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Oil P 18x12.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Oil P 18x12.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 8 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Oil18x36.JPG" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Oil18x36.JPG"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 7 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Untitled-24.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Untitled-25.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 6 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Untitled-27.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Untitled-27.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 5 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Untitled-30.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Untitled-30.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 4 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Untitled-31.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Untitled-31.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 3 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Untitled-37.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Untitled-37.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 2 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Untitled-38.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Untitled-38.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+           <!-- Image 1 -->
+          <div class="col-md-4">
+            <div class="card reveal">
+              <img src="images/landscape sceneries/Untitled-51.jpg" class="w-100" alt="Calligraphy Artwork">
+              <div class="meta">
+                <a href="images/landscape sceneries/Untitled-51.jpg"
+                  style="text-decoration:none; color:#f7f7f8; font-weight:bolder;">View</a>
+                <button class="add-to-cart" data-name="Calligraphy Artwork 2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+         <section id="contact">
+        <h3>Contact & Commissions</h3>
+        <div class="contact-wrap">
+          <form onsubmit="submitContact(event)" class="reveal"
+            style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.02)">
+            <label style="font-weight:700">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+            <label style="font-weight:700;margin-top:8px">Email</label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+            <label style="font-weight:700;margin-top:8px">Subject</label>
+            <input type="text" id="subject" placeholder="Commission / enquiry" />
+            <label style="font-weight:700;margin-top:8px">Message</label>
+            <!-- cart -->
+            <section id="cart">
+              <h3 style="text-align: center;">Your Cart</h3>
+ <p style="color:var(--muted);text-align:center;margin:6px 0">Items you've added will appear here.</p>
+              <ul id="cart-items"></ul>
+            </section>
+            <textarea id="message" rows="6" placeholder="Tell me about your project or inquiry" required></textarea>
+            <div style="display:flex;gap:10px;margin-top:10px;align-items:center">
+              <button type="submit" class="btn btn-contact">Send message</button>
+              <div style="color:var(--muted);font-size:19px;">Or email: <a href="mailto:asifghayaz831@gmail.com"
+                  style="text-decoration: none; color: #f7f7f8; font-size: 15px;" target="_blank" class="btn"><i
+                    class="fa-solid fa-envelope" style="padding: 6px;"></i>asifghayaz831@gmail.com</a></div>
+            </div>
+            <div id="status" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
+          </form>
+  <aside class="side-card">
+            <h4>Studio & Social</h4>
+            <p style="color:var(--muted);margin:6px 0">Studio visits by appointment. Based in (city).</p><br>
+            <div class="socials" style="text-decoration: none; color: #f7f7f8;">
+              <a href="https://www.instagram.com/asifghayaz/" style="text-decoration: none; padding: 12px; " aria-label="Instagram"><a
+                  href="https://www.instagram.com/asifghayaz/" target="_blank" style="text-decoration: none;">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                Instagram</a>
+                <br><br>
+              <a href="https://www.facebook.com/asif.ghayaz/" style="text-decoration: none; padding: 12px;" aria-label="Facebook">
+                <a href="https://www.facebook.com/asif.ghayaz/" target="_blank" style="text-decoration: none;">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>Facebook</a>
+                <br><br>
+              <a href="https://wa.me/+923463355657" style="text-decoration: none; padding: 12px;" aria-label="Buy prints"><a
+                  href="https://wa.me/923463355657" target="_blank" style="text-decoration: none; ">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                Shop</a>
+            </div>
+            <br><br>
+            <h4 style="margin-top:12px">Newsletter</h4>
+            <p style="color:var(--muted);margin:6px 0">Get show announcements and new work updates.</p>
+            <form onsubmit="subscribe(event)">
+              <input id="subscribe-email" type="email" placeholder="Your email" required />
+              <button type="submit" class="btn btn-outline" style="margin-top:8px">Subscribe</button>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Asif Ghayaz — All rights reserved
+    </footer>
+    <a href="https://www.instagram.com/asifghayaz/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30"
+        height="30">
+    </a>
+
+    <a href="https://www.facebook.com/asif.ghayaz/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" width="30"
+        height="30">
+    </a>
+    <a href="https://wa.me/+923463355657" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="35" height="35">
+    </a>
+
+  </div>
+<script>
+    // runtime values
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal on load
+    window.addEventListener('load', () => { document.querySelectorAll('.reveal').forEach((el, i) => setTimeout(() => el.classList.add('in'), i * 120)) });
+
+    // gallery lightbox
+    document.querySelectorAll('.masonry .card').forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+      });
+    });
+    function submitContact(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim() || 'Commission inquiry';
+      const message = document.getElementById('message').value.trim();
+
+      // Collect cart items
+      const cartList = Array.from(document.querySelectorAll('#cart-items li'))
+        .map(li => li.textContent.replace('Remove', '').trim())
+        .join('\n');
+      const cartTotal = document.getElementById('cart-total').textContent;
+
+      if (!name || !email || !message) {
+        document.getElementById('status').textContent = 'Please complete required fields.';
+        return;
+      }
+
+      const body = encodeURIComponent(
+        `Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+Cart Items:
+${cartList || 'No items'}
+Total: Rs ${cartTotal}`
+      );
+
+      window.location.href = `mailto:asifghayaz831@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      document.getElementById('status').textContent = 'Opening your mail client...';
+    }
+
+
+
+    // newsletter subscribe (client-only placeholder)
+    function subscribe(e) { e.preventDefault(); const em = document.getElementById('subscribe-email').value; alert('Thanks — we\'ll notify you at ' + em) }
+
+    // graceful fallback for missing images
+    document.querySelectorAll('img').forEach(img => img.addEventListener('error', () => {
+      img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ffcf67"/><stop offset="1" stop-color="#ff7a59"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" font-family="Inter, Arial" font-size="36" text-anchor="middle" fill="#111">Replace with artwork image</text></svg>`);
+    }))
+  </script>
+  <script>
+    const cart = [];
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+      button.addEventListener("click", () => {
+        const name = button.getAttribute("data-name");
+
+
+        // Add to cart
+        cart.push({ name });
+        renderCart();
+      });
+    });
+
+    function renderCart() {
+      cartItems.innerHTML = "";
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        const li = document.createElement("li");
+        li.textContent = `${item.name}`;
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remove";
+        removeBtn.onclick = () => {
+          cart.splice(index, 1);
+          renderCart();
+        };
+        li.appendChild(removeBtn);
+        cartItems.appendChild(li);
+      });
+    }
+  </script>
+  </script>
+<script>
+function toggleMain() {
+  document.getElementById("mainDrop").classList.toggle("show");
+}
+
+function toggleSub(event) {
+  event.stopPropagation(); // prevent closing main menu
+  document.getElementById("subDrop").classList.toggle("show");
+}
+
+// close menus when clicking outside
+document.addEventListener("click", function(e) {
+  if (!e.target.matches(".main-btn")) {
+    document.getElementById("mainDrop").classList.remove("show");
+    document.getElementById("subDrop").classList.remove("show");
+  }
+});
+</script>
+<script>
+document.querySelectorAll('.dropdown-submenu > a').forEach(function(el){
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    let submenu = this.nextElementSibling;
+
+    // Close all other open submenus
+    document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(menu){
+      if(menu !== submenu) menu.classList.remove('show');
+    });
+
+    submenu.classList.toggle('show');
+  });
+});
+</script>
+</body>
+
+</html>
