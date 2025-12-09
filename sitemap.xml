@@ -4,4 +4,32 @@
     <loc>https://asifghayaz.com/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://asifghayaz.com/architect.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asifghayaz.com/horses.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asifghayaz.com/land.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asifghayaz.com/master.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asifghayaz.com/regular.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asifghayaz.com/other.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asifghayaz.com/calligepahy.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
