@@ -857,7 +857,6 @@
         })
         .join('\n');
 
-      const cartTotal = document.getElementById('cart-total') ? document.getElementById('cart-total').textContent : '0';
 
       if (!name || !email || !message) {
         document.getElementById('status').textContent = 'Please complete required fields.';
@@ -872,8 +871,7 @@ Message:
 ${message}
 
 Cart Items:
-${cartList || 'No items'}
-Total: Rs ${cartTotal}`
+${cartList || 'No items'}`
       );
 
       // Use mailto to open user's mail client

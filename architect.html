@@ -900,15 +900,24 @@
     // runtime values
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // reveal on load
-    window.addEventListener('load', () => { document.querySelectorAll('.reveal').forEach((el, i) => setTimeout(() => el.classList.add('in'), i * 120)) });
+    // reveal on load (keeps original behavior)
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.reveal').forEach((el, i) => setTimeout(() => el.classList.add('in'), i * 120))
+    });
 
-    // gallery lightbox
+    // gallery lightbox placeholder (kept minimal and safe)
     document.querySelectorAll('.masonry .card').forEach(card => {
-      card.addEventListener('click', () => {
+      card.addEventListener('click', (ev) => {
+        // prevent clicking buttons inside card from triggering the card click
+        if (ev.target.tagName.toLowerCase() === 'button' || ev.target.closest('button')) return;
         const img = card.querySelector('img');
+        if (!img) return;
+        // basic lightbox: open image in new tab (safe minimal behavior)
+        window.open(img.src, '_blank');
       });
     });
+
+    // CONTACT FORM: send mail using mailto with cart info
     function submitContact(e) {
       e.preventDefault();
 
@@ -919,9 +928,14 @@
 
       // Collect cart items
       const cartList = Array.from(document.querySelectorAll('#cart-items li'))
-        .map(li => li.textContent.replace('Remove', '').trim())
+        .map(li => {
+          // li text contains item name and button text - strip button text
+          const btn = li.querySelector('button');
+          if (btn) btn.remove();
+          return li.textContent.trim();
+        })
         .join('\n');
-      const cartTotal = document.getElementById('cart-total').textContent;
+
 
       if (!name || !email || !message) {
         document.getElementById('status').textContent = 'Please complete required fields.';
@@ -936,93 +950,107 @@ Message:
 ${message}
 
 Cart Items:
-${cartList || 'No items'}
-Total: Rs ${cartTotal}`
+${cartList || 'No items'}`
       );
 
+      // Use mailto to open user's mail client
       window.location.href = `mailto:asifghayaz831@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
       document.getElementById('status').textContent = 'Opening your mail client...';
     }
 
-
-
     // newsletter subscribe (client-only placeholder)
-    function subscribe(e) { e.preventDefault(); const em = document.getElementById('subscribe-email').value; alert('Thanks — we\'ll notify you at ' + em) }
+    function subscribe(e) {
+      e.preventDefault();
+      const em = document.getElementById('subscribe-email').value;
+      alert('Thanks — we\'ll notify you at ' + em)
+    }
 
     // graceful fallback for missing images
     document.querySelectorAll('img').forEach(img => img.addEventListener('error', () => {
       img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ffcf67"/><stop offset="1" stop-color="#ff7a59"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" font-family="Inter, Arial" font-size="36" text-anchor="middle" fill="#111">Replace with artwork image</text></svg>`);
     }))
-  </script>
-  <script>
-    const cart = [];
+
+    // --------- Cart functionality (fixed) ----------
+    const cart = []; // items will be objects: { name: '...', price: 0 }
     const cartItems = document.getElementById("cart-items");
-    const cartTotal = document.getElementById("cart-total");
+    const cartTotalEl = document.getElementById("cart-total");
 
+    // when Add to Cart buttons are clicked
     document.querySelectorAll(".add-to-cart").forEach(button => {
-      button.addEventListener("click", () => {
-        const name = button.getAttribute("data-name");
+      button.addEventListener("click", (ev) => {
+        // prevent the card click lightbox
+        ev.stopPropagation();
 
+        const name = button.getAttribute("data-name") || 'Unnamed item';
+        // default price is 0 (you can add data-price attributes if you want prices later)
+        const priceAttr = button.getAttribute("data-price");
+        const price = priceAttr ? Number(priceAttr) || 0 : 0;
 
-        // Add to cart
-        cart.push({ name });
+        cart.push({ name, price });
         renderCart();
       });
     });
 
     function renderCart() {
+      if (!cartItems) return;
       cartItems.innerHTML = "";
       let total = 0;
       cart.forEach((item, index) => {
-        total += item.price;
+        total += (item.price || 0);
         const li = document.createElement("li");
-        li.textContent = `${item.name}`;
+        li.textContent = item.name;
+
         const removeBtn = document.createElement("button");
         removeBtn.textContent = "Remove";
-        removeBtn.onclick = () => {
+        removeBtn.onclick = (ev) => {
+          ev.stopPropagation();
           cart.splice(index, 1);
           renderCart();
         };
         li.appendChild(removeBtn);
         cartItems.appendChild(li);
       });
+
+      if (cartTotalEl) cartTotalEl.textContent = total;
     }
+
+    // initialise cart display (in case empty)
+    renderCart();
   </script>
-  </script>
-<script>
-function toggleMain() {
-  document.getElementById("mainDrop").classList.toggle("show");
-}
+  <script>
+    function toggleMain() {
+      document.getElementById("mainDrop").classList.toggle("show");
+    }
 
-function toggleSub(event) {
-  event.stopPropagation(); // prevent closing main menu
-  document.getElementById("subDrop").classList.toggle("show");
-}
+    function toggleSub(event) {
+      event.stopPropagation(); // prevent closing main menu
+      document.getElementById("subDrop").classList.toggle("show");
+    }
 
-// close menus when clicking outside
-document.addEventListener("click", function(e) {
-  if (!e.target.matches(".main-btn")) {
-    document.getElementById("mainDrop").classList.remove("show");
-    document.getElementById("subDrop").classList.remove("show");
-  }
-});
-</script>
-<script>
-document.querySelectorAll('.dropdown-submenu > a').forEach(function(el){
-  el.addEventListener('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    let submenu = this.nextElementSibling;
-
-    // Close all other open submenus
-    document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(menu){
-      if(menu !== submenu) menu.classList.remove('show');
+    // close menus when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.matches(".main-btn")) {
+        document.getElementById("mainDrop").classList.remove("show");
+        document.getElementById("subDrop").classList.remove("show");
+      }
     });
+  </script>
+  <script>
+    document.querySelectorAll('.dropdown-submenu > a').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-    submenu.classList.toggle('show');
-  });
-});
-</script>
+        let submenu = this.nextElementSibling;
+
+        // Close all other open submenus
+        document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function (menu) {
+          if (menu !== submenu) menu.classList.remove('show');
+        });
+
+        submenu.classList.toggle('show');
+      });
+    });
+  </script>
 </body>
 </html>
